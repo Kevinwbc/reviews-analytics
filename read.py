@@ -6,3 +6,9 @@ with open('reviews.txt', 'r') as f:
 		count += 1  #計數用意1次2次
 		if count % 100000 == 0:  #如果count的餘數是0
 			print(len(data))
+print('檔案讀取完了，總共有', len(data), '筆資料')
+
+sum_len = 0
+for d in data:       #求每一筆的資料於data內
+	sum_len = sum_len + len(d)  #len(d)為每一筆資料長度
+print('留言的平均長度為: ', sum_len / len(data), '個字') #留言的平均長度
